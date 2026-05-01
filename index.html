@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Census 2023 mode share map</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero card">
+      <p class="eyebrow">Auckland Travel Patterns</p>
+      <h1>Census 2023 mode share map</h1>
+      <p class="hero-copy">
+        Explore how people travel to work and study across Auckland SA2 areas.
+        Adjust the filters, click a neighbourhood for a local breakdown, and
+        export the current map view as an SVG.
+      </p>
+    </header>
+
+    <main class="app-layout">
+      <section class="map-panel card" aria-labelledby="map-title">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Map</p>
+            <h2 id="map-title">Current view</h2>
+          </div>
+          <p class="panel-note">Click an area to inspect its mode split.</p>
+        </div>
+        <div id="map-root" class="map-root"></div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="card panel-block" aria-labelledby="filters-title">
+          <p class="eyebrow">Filters</p>
+          <h2 id="filters-title">Choose a mode and group</h2>
+          <div id="controls-root" class="controls-root"></div>
+        </section>
+
+        <section class="card panel-block" aria-labelledby="share-title">
+          <p class="eyebrow">Share</p>
+          <h2 id="share-title">Link to this view</h2>
+          <p id="share-summary" class="share-summary"></p>
+          <a id="share-link" class="share-link" href="./">Loading current view…</a>
+        </section>
+
+        <section class="card panel-block" aria-labelledby="export-title">
+          <p class="eyebrow">Export</p>
+          <h2 id="export-title">Download SVG</h2>
+          <div id="download-root" class="download-root"></div>
+          <p class="panel-note">The export uses the active filters and current map styling.</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="sources card">
+      <p class="eyebrow">Sources</p>
+      <p>
+        Statistical area boundaries and census mode-share data are from Stats NZ
+        and are provided under the Creative Commons Attribution New Zealand licence.
+      </p>
+      <p>
+        Street and coastline context is based on OpenStreetMap data.
+      </p>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

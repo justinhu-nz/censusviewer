@@ -1,0 +1,14 @@
+{
+  "name": "2142852435976b90",
+  "main": "2142852435976b90@1066.js",
+  "version": "1066.0.0",
+  "homepage": "https://observablehq.com/d/2142852435976b90",
+  "author": {
+    "name": "justinhu",
+    "url": "https://observablehq.com/@justinhu"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
