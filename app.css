@@ -40,7 +40,7 @@ input {
 }
 
 .page-shell {
-  width: min(1200px, calc(100vw - 2rem));
+  width: min(1680px, calc(100vw - 2rem));
   margin: 0 auto;
   padding: 1.25rem 0 2.5rem;
 }
@@ -99,7 +99,7 @@ h2 {
 
 .app-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  grid-template-columns: minmax(0, 1.9fr) minmax(340px, 0.72fr);
   gap: 1rem;
   align-items: start;
 }
@@ -129,14 +129,20 @@ h2 {
 .side-panel {
   display: grid;
   gap: 1rem;
+  align-content: start;
+}
+
+.map-panel {
+  overflow: hidden;
 }
 
 .map-root {
-  min-height: 24rem;
+  min-height: 30rem;
 }
 
 .map-root > div {
   position: relative;
+  width: 100%;
 }
 
 .map-root svg {

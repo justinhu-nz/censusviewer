@@ -14,6 +14,7 @@ function logCellError(error, name) {
 
 function createNodeObserver(container, onFulfilled) {
   return {
+    _node: container,
     pending() {
       container.dataset.loading = "true";
     },
@@ -40,6 +41,7 @@ function createNodeObserver(container, onFulfilled) {
 
 function createSilentObserver(onFulfilled) {
   return {
+    _node: document.body,
     pending() {},
     fulfilled(value, name) {
       onFulfilled?.(value, name);
