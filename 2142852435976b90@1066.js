@@ -570,9 +570,10 @@ worldfile_to_bbox(img_m_per_px, 378000, 823500, img_size)
 function _chart_size(width,img_size)
 {
   const max_chart_h = 800;
-  var h = Math.round(width * img_size[1] / img_size[0]);
-  if (h < max_chart_h) return [width, h];
-  return [width, max_chart_h];
+  const img_w = img_size[0];
+  const img_h = img_size[1];
+  const scale = Math.min(width / img_w, max_chart_h / img_h);
+  return [Math.round(img_w * scale), Math.round(img_h * scale)];
 }
 
 
